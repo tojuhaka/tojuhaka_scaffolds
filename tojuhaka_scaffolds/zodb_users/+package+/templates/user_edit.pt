@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      metal:use-macro="base">
+  <tal:block  metal:fill-slot="content">
+        <h2>${username}</h2>
+        <div class="message">
+          <p> ${message} </p>
+        </div>
+        ${form.begin(request.url)}
+        ${form.csrf_token()}
+        <div class="field">
+          <span class="formlabel">${form.label("new_password")} </span>
+          ${form.errorlist("new_password")}
+          <span class="forminput">${form.password("new_password")}</span>
+        </div>
+        <div class="field">
+          <span class="formlabel">${form.label("new_password_confirm")}</span>
+          ${form.errorlist("new_password_confirm")}
+          <span class="input">${form.password("new_password_confirm")}</span>
+        </div>
+        <div class="field">
+          ${form.label("email")}
+          ${form.errorlist("email")}
+          ${form.text("email", value=email)}
+        </div>
+        <div class="field">
+          ${form.label("password")}
+          ${form.errorlist("password")}
+          ${form.password("password")}
+        </div>
+        <div class="buttons">
+            ${form.submit("submit", "Save changes")}
+        </div>
+        ${form.end()}
+    </tal:block>
+</html>

@@ -1,0 +1,65 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      metal:use-macro="base">
+  <tal:block  metal:fill-slot="content">
+    <h1 i18n:translate="edit_user_header"> Edit users </h1>
+
+    <div tal:condition="message" class="message"> 
+      <span class="message_str"> ${message} </span> 
+    </div>
+
+    <div tal:condition="search_term">
+      <div tal:condition="search_results" class="result-count">
+        <h2>${result_count} 
+          <span i18n:translate="results_found" class="result">results found</span>
+         <h2>
+      </div>
+      <div tal:condition="not: search_results" class="result-count">
+          <span i18n:translate="no_results" class="result_not_found">
+                No results found</span>
+      </div>
+    </div>
+
+    ${form.begin(request.url)}
+    ${form.csrf_token()}
+      <div class="field">
+        <span class="formlabel">${form.label("search")}</span>
+        <span class="forminput">${form.text("search")}</span>
+      </div>
+      <div class="buttons">
+        <span class="forminput">${form.submit("submit", "Search")}</span>
+      </div>
+   
+      <div tal:condition="search_results" id="results">
+      <table border=1>
+        <thead>
+        <tr>
+          <th></th>
+          <th tal:attributes="i18n:translate string:${gname}_label" 
+              tal:repeat="gname sorted_gnames" tal:content="gname"></th>
+        </tr>
+        </thead>
+          <tbody>
+            <tal:block repeat="user search_results">
+                <tr tal:define="odd repeat.user.odd"
+                    tal:attributes="class python: odd and 'odd' or 'even'">
+              <!-- <tr tal:repeat="user search_results" > -->
+                <td tal:content="user.username">Username</td>
+                <td tal:repeat="gname sorted_gnames">
+                   <input tal:attributes="checked has_group(gname, user, request);
+                            value group_names[gname];
+                            name string:checkbox-${gname}:${user.username}"
+                            class="checkbox" type="checkbox"/>
+                </td>
+              </tr>
+            </tal:block>
+          </tbody>
+        </table>
+      <div class="buttons">
+        <span class="forminput">${form.submit("submit", "Save")}</span>
+      </div>
+      </div>
+    ${form.end()}
+  </tal:block>
+</html>

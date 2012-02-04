@@ -1,0 +1,3 @@
+        [pyramid.scaffold]
+        users_extension=tojuhaka_scaffolds:ZODBUsersTemplate
+      
