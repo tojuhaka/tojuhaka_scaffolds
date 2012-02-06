@@ -194,14 +194,18 @@ class UsersView(object):
 
             # Loop through all the users and create dict of groups
             for user in self.context:
-                if search in self.context[user].username:
+                if search.lower() in self.context[user].username.lower():
                     search_results.append(self.context[user])
-
-            if self.request.params['submit'] == 'Save':
+            
+            # TODO: do we really need 'save in' -check
+            if 'save' in self.request.params.keys() and \
+                    self.request.params['save'] == 'Save':
                 message = msg['saved']
                 # Filter checkbox-parameters from request
                 cbs = [p for p in self.request.params.keys()
                             if u'checkbox' in p]
+                users = [self.request.params[p] for p in self.request.params.keys()
+                            if u'user' == p]
 
                 # new policy for groups
                 updated = {}
@@ -215,8 +219,13 @@ class UsersView(object):
                     except KeyError:
                         updated[username] = []
                     updated[username] += [self.request.params[cb]]
-
+                
                 groups_tool = get_resource('groups', self.request)
+
+                # Init users as empty first, then update with checkbox-data
+                # TODO: add 'u:user' group?
+                for user in users:
+                    groups_tool.flush(user)
                 groups_tool.add_policy(updated)
 
         def has_group(group, user, request):

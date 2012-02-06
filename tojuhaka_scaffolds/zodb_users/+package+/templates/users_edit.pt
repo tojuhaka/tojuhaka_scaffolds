@@ -57,7 +57,7 @@
           </tbody>
         </table>
       <div class="buttons">
-        <span class="forminput">${form.submit("submit", "Save")}</span>
+        <span class="forminput">${form.submit("save", "Save")}</span>
       </div>
       </div>
     ${form.end()}
