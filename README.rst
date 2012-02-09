@@ -1,1 +1,12 @@
-This project includes all the scaffolds I've done for pyramid. 
+Introduction
+------------
+My scaffolds for pyramid.
+
+Installation
+------------
+python setup.py develop
+
+pcreate -t users_extension <name>
+
+
+

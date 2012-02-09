@@ -1,6 +1,4 @@
-README.txt
 setup.py
-remove_me/__init__.py
 tojuhaka_scaffolds/__init__.py
 tojuhaka_scaffolds.egg-info/PKG-INFO
 tojuhaka_scaffolds.egg-info/SOURCES.txt
