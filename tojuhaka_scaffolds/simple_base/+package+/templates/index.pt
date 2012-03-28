@@ -1,0 +1,36 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      metal:use-macro="base"
+      i18n:domain="tojuhaka">
+  <tal:block  metal:fill-slot="content">
+    <div class="hero-unit">
+      <h1>Toni Haka-Risku</h1>
+      <p> I'm a software developer from Jyväskylä. I've been studying IT at the university of Jyväskylä since 2009 and worked as a developer since 2010. This website was created so that I'm able keep track of the projects i've been developing. It also works as CV for me.
+      a small introduction about me </p>
+      <p><a class="btn btn-primary btn-large">Check my Github »</a></p>
+    </div>
+    <div class="row-fluid">
+      <div class="span12">
+        <h2>History</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Workplace</th>
+              <th>Date</th>
+              <th>Title</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>…</td>
+              <td>…</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <p><a class="btn" href="http://twitter.github.com/bootstrap/examples/fluid.html#">View details »</a></p>
+    </div><!--/span-->
+  </tal:block>
+</html>
