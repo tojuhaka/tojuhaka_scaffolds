@@ -14,7 +14,7 @@ requires = [
     ]
 
 setup(name='tojuhaka_scaffolds',
-      version='0.0',
+      version='1.0',
       description='tojuhaka_scaffolds',
       long_description=README + '\n\n' +  CHANGES,
       classifiers=[

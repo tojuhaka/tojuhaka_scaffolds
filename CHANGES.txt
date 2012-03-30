@@ -1,0 +1,9 @@
+Changelog
+=========
+
+1.0 (2012-3-30)
+---------------
+- First release
+- added simple_base template which contains bootstrap 
+  and some basic stuff 
+- added zodb_users template which contains basic user management
