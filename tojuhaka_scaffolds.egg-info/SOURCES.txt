@@ -1,9 +1,0 @@
-setup.py
-scaffolds/__init__.py
-tojuhaka_scaffolds.egg-info/PKG-INFO
-tojuhaka_scaffolds.egg-info/SOURCES.txt
-tojuhaka_scaffolds.egg-info/dependency_links.txt
-tojuhaka_scaffolds.egg-info/entry_points.txt
-tojuhaka_scaffolds.egg-info/not-zip-safe
-tojuhaka_scaffolds.egg-info/requires.txt
-tojuhaka_scaffolds.egg-info/top_level.txt
