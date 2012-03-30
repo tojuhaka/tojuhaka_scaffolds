@@ -1,0 +1,4 @@
+        [pyramid.scaffold]
+        users_extension=scaffolds:ZODBUsersTemplate
+        simple_base=scaffolds:SimpleBaseTemplate
+      

@@ -1,0 +1,38 @@
+Metadata-Version: 1.0
+Name: tojuhaka-scaffolds
+Version: 1.0
+Summary: tojuhaka_scaffolds
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: Introduction
+        ------------
+        My scaffolds for pyramid.
+        
+        Installation
+        ------------
+        python setup.py develop
+        
+        pcreate -t users_extension <name>
+        
+        
+        
+        
+        
+        Changelog
+        =========
+        
+        1.0 (2012-3-30)
+        ---------------
+        - First release
+        - added simple_base template which contains bootstrap 
+          and some basic stuff 
+        - added zodb_users template which contains basic user management
+        
+Keywords: web pylons pyramid
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Pylons
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
