@@ -6,10 +6,16 @@ Home-page: UNKNOWN
 Author: UNKNOWN
 Author-email: UNKNOWN
 License: UNKNOWN
-Description: Installation
+Description: Introduction
         ------------
+        My scaffolds for pyramid.
         
+        Installation
+        ------------
         python setup.py develop
+        
+        pcreate -t users_extension <name>
+        
         
         
         
