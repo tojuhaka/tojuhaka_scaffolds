@@ -1,5 +1,5 @@
 setup.py
-tojuhaka_scaffolds/__init__.py
+scaffolds/__init__.py
 tojuhaka_scaffolds.egg-info/PKG-INFO
 tojuhaka_scaffolds.egg-info/SOURCES.txt
 tojuhaka_scaffolds.egg-info/dependency_links.txt

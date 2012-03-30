@@ -11,11 +11,20 @@ requires = [
     'pyramid_zodbconn',
     'pyramid_tm',
     'pyramid_debugtoolbar',
+    'ZODB3',
+    'webError',
+    'docutils',
+    'passlib',
+    'webtest',
+    'pyramid_simpleform',
+    'formencode',
+    'nose',
+    'pyramid_zcml',
     ]
 
-setup(name='tojuhaka_scaffolds',
+setup(name='{{project}}',
       version='0.0',
-      description='tojuhaka_scaffolds',
+      description='{{project}}',
       long_description=README + '\n\n' +  CHANGES,
       classifiers=[
         "Programming Language :: Python",
@@ -32,10 +41,10 @@ setup(name='tojuhaka_scaffolds',
       zip_safe=False,
       install_requires = requires,
       tests_require= requires,
+      test_suite="{{package}}",
       entry_points = """\
-        [pyramid.scaffold]
-        users_extension=scaffolds:ZODBUsersTemplate
-        simple_base=scaffolds:SimpleBaseTemplate
-      """
+      [paste.app_factory]
+      main = {{package}}:main
+      """,
       )
 
